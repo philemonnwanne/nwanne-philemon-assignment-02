@@ -32,13 +32,17 @@ function sumOfNumbers(arrayOfNumbers) {
  * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
+    // Initializing an empty array to hold the even numbers
     let result = [];
+    // Iterating over each item of (arrayOfNumbers)
     for (let item = 0; item < arrayOfNumbers.length; item++) {
+        // Applying the modulus operator to get even numbers of (arrayOfNumbers)
         if (arrayOfNumbers[item] % 2 === 0) {
+            // Updating the empty (result) array with even numbers
             result.push(arrayOfNumbers[item]);
         }
     }
-    console.log(result);
+    // Returning the count of all even numbers in the (result) array
     return result.length
 }
 assignment.countEvenNumbers = countEvenNumbers;
@@ -58,14 +62,20 @@ assignment.countEvenNumbers = countEvenNumbers;
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
+     // Initializing an empty array to hold the fahrenheit values
     let arrayToFarenheit = [];
+    // Iterating over each number of (arrayOfNumbers)
     for (num of arrayOfNumbers) {
         if (num) {
-            // calculate fahrenheit
-            const fahrenheit = num * 1.8 + 32
-            arrayToFarenheit.push(Math.trunc(fahrenheit))
+            // Formular for converting each number to fahrenheit
+            const numToFahrenheit = num * 1.8 + 32
+            // Removing decimal figures in the converted numbers
+            let toWholeNumber = Math.trunc(numToFahrenheit)
+            // Inserting the converted celsius values into the empty (arrayToFarenheit) array
+            arrayToFarenheit.push(Math.trunc(toWholeNumber))
         }
     }
+    // Returning the updated (arrayToFarenheit) array with temperature values in farenheit instead
     return arrayToFarenheit;
 }
 assignment.celsiusToFahrenheit = celsiusToFahrenheit;
